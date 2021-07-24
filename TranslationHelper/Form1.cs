@@ -76,10 +76,8 @@ namespace TranslationHelper
             {
                 MessageBox.Show("No path directory selected");
             }
-
             else
             {
-                StreamWriter file = new StreamWriter(textBox1.Text + "sample.txt");
                 try
                 {
                     string sLine = "";
@@ -107,18 +105,16 @@ namespace TranslationHelper
                         //The exported text is written to the text file, one line at a time.
                         if (!string.IsNullOrEmpty(sLine))
                         {
-                            file.WriteLine(sLine);
+                            File.AppendAllText(textBox1.Text + @"\\sample.txt", sLine + Environment.NewLine);
                         }
                         sLine = "";
                     }
 
-                    file.Close();
                     MessageBox.Show("Export Complete.", "Program Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (System.Exception err)
                 {
                     MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    file.Close();
                 }
             }
 
