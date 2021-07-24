@@ -71,7 +71,7 @@ namespace TranslationHelper
             // 
             // btnAddToFile
             // 
-            this.btnAddToFile.Location = new System.Drawing.Point(789, 309);
+            this.btnAddToFile.Location = new System.Drawing.Point(789, 231);
             this.btnAddToFile.Name = "btnAddToFile";
             this.btnAddToFile.Size = new System.Drawing.Size(138, 23);
             this.btnAddToFile.TabIndex = 7;
@@ -87,7 +87,7 @@ namespace TranslationHelper
             this.English,
             this.Chinese,
             this.Malay});
-            this.dataGridView1.Location = new System.Drawing.Point(83, 138);
+            this.dataGridView1.Location = new System.Drawing.Point(83, 75);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(844, 150);
@@ -145,7 +145,7 @@ namespace TranslationHelper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 663);
+            this.ClientSize = new System.Drawing.Size(1008, 303);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAddToFile);
