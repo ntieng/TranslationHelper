@@ -119,5 +119,65 @@ namespace TranslationHelper
             }
 
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //This for loop loops through each row in the table
+                for (int r = 0; r <= dataGridView1.Rows.Count - 1; r++)
+                {
+                    //This for loop loops through each column, and the row number
+                    //is passed from the for loop above.
+                    string key = "";
+                    string english = "";
+                    string chinese = "";
+                    string malay = "";
+                    for (int c = 0; c <= dataGridView1.Columns.Count - 1; c++)
+                    {
+                        if (dataGridView1.Rows[r].Cells[c].Value != null)
+                        {
+                            if (string.IsNullOrEmpty(dataGridView1.Rows[r].Cells[c].Value.ToString()))
+                            {
+                                continue;
+                            }
+                            switch (c)
+                            {
+                                case 0:
+                                    key = dataGridView1.Rows[r].Cells[c].Value.ToString();
+                                    break;
+                                case 1:
+                                    english = dataGridView1.Rows[r].Cells[c].Value.ToString();
+                                    richTextBox1.AppendText(key + ":" + english + "\r\n");
+                                    break;
+                                case 2:
+                                    chinese = dataGridView1.Rows[r].Cells[c].Value.ToString();
+                                    richTextBox2.AppendText(key + ":" + chinese + "\r\n");
+                                    break;
+                                case 3:
+                                    malay = dataGridView1.Rows[r].Cells[c].Value.ToString();
+                                    richTextBox3.AppendText(key + ":" + malay + "\r\n");
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                    }
+                }
+
+                //MessageBox.Show("Print Complete.", "Program Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (System.Exception err)
+            {
+                MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnClearRichTextBox_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            richTextBox2.Clear();
+            richTextBox3.Clear();
+        }
     }
 }

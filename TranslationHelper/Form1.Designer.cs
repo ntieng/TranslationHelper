@@ -42,6 +42,11 @@ namespace TranslationHelper
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnClearRichTextBox = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -141,12 +146,61 @@ namespace TranslationHelper
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(83, 291);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(212, 96);
+            this.richTextBox1.TabIndex = 9;
+            this.richTextBox1.Text = "";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(372, 291);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(212, 96);
+            this.richTextBox2.TabIndex = 10;
+            this.richTextBox2.Text = "";
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Location = new System.Drawing.Point(663, 291);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(212, 96);
+            this.richTextBox3.TabIndex = 11;
+            this.richTextBox3.Text = "";
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(640, 231);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(134, 23);
+            this.btnPrint.TabIndex = 12;
+            this.btnPrint.Text = "Print to Rich Text Box";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnClearRichTextBox
+            // 
+            this.btnClearRichTextBox.Location = new System.Drawing.Point(407, 404);
+            this.btnClearRichTextBox.Name = "btnClearRichTextBox";
+            this.btnClearRichTextBox.Size = new System.Drawing.Size(150, 23);
+            this.btnClearRichTextBox.TabIndex = 13;
+            this.btnClearRichTextBox.Text = "Clear Rich Text Box";
+            this.btnClearRichTextBox.UseVisualStyleBackColor = true;
+            this.btnClearRichTextBox.Click += new System.EventHandler(this.btnClearRichTextBox_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 303);
+            this.ClientSize = new System.Drawing.Size(1008, 456);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.btnClearRichTextBox);
+            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.richTextBox3);
+            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAddToFile);
             this.Controls.Add(this.textBox1);
@@ -174,6 +228,11 @@ namespace TranslationHelper
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnClearRichTextBox;
     }
 }
 
